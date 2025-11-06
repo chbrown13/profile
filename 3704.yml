@@ -1,0 +1,6 @@
+- group:
+    description: "Basic checks for CS-3704"
+    checks:
+      - version:
+         cmd: git --version
+         range: ^2.x.x
