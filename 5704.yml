@@ -1,5 +1,5 @@
 - group:
-    description: "Basic checks for CS3704: Intermediate Software Design and Engineering"
+    description: "Basic checks for CS5704: Software Engineering"
     checks:
       - version:
          cmd: git --version
