@@ -7,11 +7,11 @@
 
       - version:
          cmd: docker -v
-         range: ^19.03.x
+         range: ^19.x.x
 
       - version:
         cmd: npm -v
 
       - version:
          cmd: python3 --version
-         range: ^3.0.x
+         range: ^3.x.x
