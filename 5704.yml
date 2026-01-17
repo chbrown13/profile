@@ -1,6 +1,17 @@
 - group:
-    description: "Basic checks for CS5704: Software Engineering"
+    description: "Basic configuration checks for the 'CS5704: Software Engineering' course at Virginia Tech taught by Dr. Chris Brown."
     checks:
       - version:
          cmd: git --version
          range: ^2.x.x
+
+      - version:
+         cmd: docker -v
+         range: ^19.03.x
+
+      - version:
+        cmd: npm -v
+
+      - version:
+         cmd: python3 --version
+         range: ^3.0.x
