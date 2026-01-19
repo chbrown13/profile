@@ -17,8 +17,8 @@
          range: ^19.x.x
 
       - version:
-        cmd: npm -v
-        range: ^9.x.x
+         cmd: npm -v
+         range: ^9.x.x
 
 - group:
    description: "Git configurations"
