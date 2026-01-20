@@ -37,5 +37,6 @@
          range: ^2.x.x
    
       - command:
+         # May need to start Docker Desktop first to ensure extension manager is running
          exec: docker extension ls
          stdout: "dockersamples\/labspace-extension"
