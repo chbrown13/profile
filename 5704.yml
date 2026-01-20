@@ -37,6 +37,5 @@
          range: ^2.x.x
    
       - command:
-         comment: Checking docker labspace extension is installed
          exec: docker extension ls
          stdout: "*dockersamples/labspace-extension*"
