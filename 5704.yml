@@ -38,5 +38,5 @@
    
       - contains:
          comment: Checking docker labspace extension is installed
-         string: "dockersamples/labspace-extension"
-         cmd: docker extension ls
+         exec: docker extension ls
+         stdout: "*dockersamples/labspace-extension*"
