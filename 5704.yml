@@ -38,4 +38,4 @@
    
       - command:
          exec: docker extension ls
-         stdout: "*dockersamples/labspace-extension*"
+         stdout: "dockersamples\/labspace-extension"
