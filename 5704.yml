@@ -36,7 +36,7 @@
          cmd: docker compose version
          range: ^2.x.x
    
-      - contains:
+      - command:
          comment: Checking docker labspace extension is installed
          exec: docker extension ls
          stdout: "*dockersamples/labspace-extension*"
