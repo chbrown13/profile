@@ -6,22 +6,17 @@
       - version:
          cmd: git --version
          range: ^2.x.x
-         
-      - contains: 
-         comment: Checking email is set for git commits
-         string: "@"
-         file: ~/.gitconfig
-      
+
       - version:
          cmd: docker -v
          range: ^19.x.x
-
+         
       - version:
          cmd: npm -v
          range: ^9.x.x
 
 - group:
-   description: "Git configurations"
+   description: "Git configuration"
    checks:
      - contains: 
          comment: Checking email is set for git commits
@@ -33,3 +28,15 @@
      - command:
          exec: git config --global --get user.email
          stdout: "[a-zA-Z0-9_@]+"
+
+- group:
+   description: "Docker configuration"
+   checks:      
+      - version:
+         cmd: docker compose version
+         range: ^2.x.x
+   
+      - contains:
+         comment: Checking docker labspace extension is installed
+         string: "dockersamples/labspace-extension"
+         cmd: docker extension ls
