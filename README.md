@@ -1,12 +1,12 @@
 # Opunit
 
-[opunit](https://github.com/ottomatica/opunit) is a simple tool for verifying the configuration of a machine, including your laptop and or any virtual machines you may have created.
+[opunit](https://github.com/ottomatica/opunit) is a simple tool for verifying the configuration of a machine, including your laptop and or any virtual machines you may create.
 
 ## Checking your local environment
 
 By running opunit, you'll be able to verify your machine is correctly setup for a course, workshop, or homework assignment. 
 
-In the simpliest case, opunit can check if you have the right versions of software installed. Beyond these simple checks, opunit can also verify the correct configuration of software and services that you'll be automating later in the course.
+In the simpliest case, opunit can check if you have the right versions of software installed. Beyond these simple checks, opunit can also verify the correct configuration of software and services that you may need to automate.
 
 ### Installing opunit
 
@@ -20,7 +20,7 @@ npm install ottomatica/opunit -g
 
 ### Running opunit
 
-You can check your local machine against a course profile, but running the following command:
+You can check your local machine against a course profile by running the following command:
 
 ```bash
 opunit profile CSC-DevOps/profile:519.yml
@@ -46,12 +46,10 @@ For example, if you are working on the [Pipelines workshop](https://github.com/C
 opunit verify local
 ```
 
-This will check whether you have correctly setup your pipeline for the workshop. Before doing anything, it would be expected for most checks to fail. As you complete more steps from the workshop, more checks should pass!
+This will check whether you have correctly setup your machine for the workshop assignment.
 
 
 
 ### Running opunit against a virtual machine
 
-opunit can be run against a virtual machine, both locally on your machine, as well as remote virtual machines created on platforms such as AWS or digital ocean.
-
-Further instructions will be provided when we get to this step.
+opunit can also be run against a virtual machine, both locally on your machine as well as on remote virtual machines created on platforms such as AWS or digital ocean.
