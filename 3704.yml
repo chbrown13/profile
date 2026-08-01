@@ -51,5 +51,5 @@
             cmd: opunit --version
             range: ^0.x.x
         - command:
-            exec: echo $ARC_API_KEY+test
-            stdout: sk-*test
+            exec: echo $ARC_API_KEY
+            stdout: ^sk-
