@@ -1,6 +1,54 @@
+# Basic configuration checks for the "CS3704: Intermediate Software Design and Engineering" course at Virginia Tech taught by Dr. Chris Brown. Based on configurations by Dr. Chris Parnin.
+
 - group:
-    description: "Basic checks for CS3704: Intermediate Software Design and Engineering"
+    description: "Essential development tools"
     checks:
       - version:
          cmd: git --version
          range: ^2.x.x
+      - version:
+         cmd: docker -v
+         range: ^19.x.x   
+      - version:
+         cmd: npm -v
+         range: ^9.x.x
+      - version:
+          cmd: opencode -v
+          range: ^1.17.x
+
+- group:
+   description: "Git configuration"
+   checks:
+     - contains: 
+         comment: Checking email is set for git commits
+         string: "@"
+         file: ~/.gitconfig       
+     - command:     
+         exec: git config --global --get user.name
+         stdout: "[a-zA-Z0-9_]+"
+     - command:
+         exec: git config --global --get user.email
+         stdout: "[a-zA-Z0-9_@]+"
+
+- group:
+   description: "Docker configuration"
+   checks:      
+      - version:
+         cmd: docker compose version
+         range: ^2.x.x
+      - command:
+         # May need to start Docker Desktop first to ensure extension manager is running
+         exec: docker extension ls
+         stdout: "dockersamples\/labspace-extension"
+
+- group:
+    description: "CS3704 class tools and configurations"
+    checks:
+        - version:
+            cmd: baker --version
+            range: ^0.x.x
+        - version:
+            cmd: opunit --version
+            range: ^0.x.x
+        - env:
+            - ARC_API_KEY=sk-*
